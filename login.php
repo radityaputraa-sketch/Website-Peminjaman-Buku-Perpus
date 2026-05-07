@@ -1,8 +1,4 @@
 <?php
-// =========================================================================
-// MOCK LOGIC BACKEND (HANYA UNTUK TESTING FRONT-END)
-// Catatan untuk Temen Backend: Ganti bagian ini dengan logika cek Database!
-// =========================================================================
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'] ?? '';
     
