@@ -1,7 +1,7 @@
 <?php 
 $role = 'admin'; 
 $page_title = 'Keseluruhan User';
-include 'components/header.php'; 
+@include('components.header'); 
 ?>
 
 <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden overflow-x-auto">
@@ -28,4 +28,4 @@ include 'components/header.php';
     </table>
 </div>
 
-<?php include 'components/footer.php'; ?>
+<?php @include('components.footer'); ?>

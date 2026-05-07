@@ -1,7 +1,7 @@
 <?php 
 $role = 'admin'; 
 $page_title = 'Dashboard Admin';
-include 'components/header.php'; 
+@include('components.header'); 
 ?>
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
@@ -20,4 +20,4 @@ include 'components/header.php';
     <p class="text-blue-600 mt-1">Gunakan menu di samping untuk mengelola buku dan memantau peminjaman.</p>
 </div>
 
-<?php include 'components/footer.php'; ?>
+<?php @include('components.footer'); ?>

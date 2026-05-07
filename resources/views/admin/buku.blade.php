@@ -1,12 +1,12 @@
 <?php 
 $role = 'admin'; 
 $page_title = 'Manajemen Buku';
-include 'components/header.php'; 
+@include('components.header'); 
 ?>
 
 <div class="flex flex-col sm:flex-row justify-between items-center mb-6 gap-4">
     <p class="text-gray-500 font-medium">List ketersediaan seluruh buku perpustakaan.</p>
-    <a href="admin_tambah_buku.php" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded-lg shadow-md transition flex items-center gap-2">
+    <a href="{{ route('admin.tambah-buku') }}" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded-lg shadow-md transition flex items-center gap-2">
         <span>+</span> Tambah Buku
     </a>
 </div>
@@ -37,4 +37,4 @@ include 'components/header.php';
     </div>
 </div>
 
-<?php include 'components/footer.php'; ?>
+<?php @include('components.footer'); ?>
