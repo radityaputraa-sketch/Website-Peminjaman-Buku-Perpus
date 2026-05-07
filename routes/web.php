@@ -1,23 +1,37 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\BookController;
-use App\Http\Controllers\LoanController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('login');
 });
 
-Route::middleware('auth')->group(function () {
+Route::get('/admin-dashboard', function () {
+    return view('admin.dashboard');
+});
 
-    Route::get('/books', [BookController::class, 'index']);
+Route::get('/admin-buku', function () {
+    return view('admin.buku');
+});
 
-    Route::post('/books', [BookController::class, 'store']);
+Route::get('/admin-tambah-buku', function () {
+    return view('admin.tambah_buku');
+});
 
-    Route::post('/pinjam/{id}', [LoanController::class, 'pinjam']);
+Route::get('/admin-users', function () {
+    return view('admin.users');
+});
 
-    Route::post('/kembalikan/{id}', [LoanController::class, 'kembalikan']);
+Route::get('/user-dashboard', function () {
+    return view('user.dashboard');
+});
 
+Route::get('/user-peminjaman', function () {
+    return view('user.peminjaman');
+});
+
+Route::get('/user-pengembalian', function () {
+    return view('user.pengembalian');
 });
 
 require __DIR__.'/auth.php';
