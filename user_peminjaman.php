@@ -3,7 +3,7 @@ $role = 'user';
 $page_title = 'Peminjaman Buku';
 include 'components/header.php'; 
 
-// Mock Data Buku sesuai request gambar (Nanti diganti sama data dari database oleh Backend)
+// Mock Data Buku sesuai request gambar (Nanti diganti sama data dari database)
 $mock_books = [
     [
         'judul' => 'Morfologi: Kajian Proses Pembentukan Kata',
